@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@700&family=Raleway:wght@300;400&family=Roboto:wght@700&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  font-size: 1rem;
+  color: rgb(113, 0, 113);
+  background-color: rgb(255, 253, 253, 0.3);
+  border-radius: 50px;
+  padding: 13px;
+  text-align: center;
+}
+
+h1 {
+	display: inline;
+	position: relative;
+	font: 100px Helvetica, Sans-Serif;
+	letter-spacing: -5px;
+	color: rgba(0,0,255,0.5);
+}
+
+h1:after {
+	position: absolute; left: 10px; top: 5px;
+	color: rgba(255,0,0,1);   
+}
+
+.app {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: rgb(220, 220, 220);
+}
+
+.app:before {
+  content: '';
+  background: url('./assets/sunset.jpg') no-repeat center center/cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-repeat: no-repeat;
+}
+
+.app .search {
+  text-align: center;
+  padding: 1rem;
+  color: white;
+}
+
+.app input {
+  padding: .7rem 1.5rem;
+  font-size: 11px;
+  border-radius: 25px;
+  border-radius: 1px solid rgba(255,255,255,0.8);
+  background: rgba(255,255,255,0.1);
+  color: white;
+}
+
+::placeholder {
+  color: #d6d5d5;
+}
+
+.container {
+  max-width: 700px;
+  height: 100%;
+  margin: auto;
+  padding: 0 1rem;
+  position: relative;
+  display: flex; 
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.app .top {
+  width: 100%;
+  margin: 1rem auto;
+}
+
+.app .description {
+  position: relative;
+  right: -90%;
+  transform-origin: 0 0;
+  transform: rotate(269deg);
+}
+
+.app .bottom {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  width: 100%;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.bold {
+  font-weight: 700;
+}
+
+/** {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    font-size: 20px;
+    color: #fff;
+}
+
+body {
+    min-height: 100vh;
+    background: url('./assets/sunset.jpg') no-repeat center center/cover;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; 
+  padding: 1rem 0.5rem;
+}
+
+section {
+    width: 100%;
+    max-width: 420px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0.5rem;
+    background-color: rgb(255, 255, 255, 0.2);
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30em;
+    margin-top: 1rem;
+    border-radius: 50px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-bottom: 0.8rem;
+}
+
+a {
+    color: rgb(0, 0, 0);
+}
+
+a:hover {
+  color: rgb(132, 0, 255);
+  text-decoration: none;
+}
+
+input[type="text"],
+input[type="password"],
+button,
+textarea {
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;;
+  font-size: 20px;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  background-color: rgb(196, 195, 195, 0.2);
+  color: white;
+  border-color: purple;
+}
+
+label,
+button {
+  margin-top: 1rem;
+  display: inline;
+	position: relative;
+	font-size: 30px;
+	color: rgba(89, 0, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 80px;
+}
+
+button {
+  padding: 0.5rem;
+  background-color: rgba(64, 64, 64, 0.2);
+  color: white;
+}
+
+button:hover {
+  background-color: rgb(196, 195, 195, 0.4) ;
+}
+
+.instructions {
+    font-size: 0.75rem;
+    border-radius: 0.5rem;
+    background: #000;
+    color: #fff;
+    padding: 0.25rem;
+    position: relative;
+    bottom: -10px;
+}
+
+.instructions > svg {
+    margin-right: 0.25rem;
+}
+
+.offscreen {
+    position: absolute;
+    left: -9999px;
+}
+
+.hide {
+    display: none;
+}
+
+.valid {
+    color: rgb(255, 255, 255);
+    margin-left: 0.25rem;
+}
+
+.invalid {
+    color: red;
+    margin-left: 0.25rem;
+}
+
+.errmsg {
+    background-color: rgb(210, 5, 35);
+    color: firebrick;
+    font-weight: bold;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.line {
+    display: inline-block;
+}*/

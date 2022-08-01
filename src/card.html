@@ -1,0 +1,15 @@
+<main className="container mt-4">
+    <h2>City</h2>
+
+    <Routes>
+        <Route path="/Weather" element={<Weather />} />
+        <Route path="cities">
+            {/* URL Prefix of /blog */}
+            <Route path=":uid">
+                {/* URL Prefix of /blog/USER_ID/POST_ID */}
+                <Route path=":id" element={<Weather />} />
+            </Route>
+            <Route path="" element={<Blog />} />
+        </Route>
+        <Route path="/" element={<Home />}  />
+    </Routes>
